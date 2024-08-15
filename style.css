@@ -1,0 +1,276 @@
+/* styles.css */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #250234;
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar .logo-image img{
+    width: 60px;
+}
+.sidebar .logo {
+    padding: 20px;
+    /* background-color: #777b82; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+}
+.logo h3{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.sidebar .nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .nav li {
+    margin: 10px 0;
+    /* background-color: #9c75ac; */
+}
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgb(105, 98, 98);
+    border-radius: 12px;
+}
+.nav li a:hover{
+    filter: drop-shadow(2px 2px 4px rgb(193, 3, 3));
+}
+
+.nav li a img{
+    height: 30px;
+    margin-right: 10px;
+}
+.main-content{
+    background-color: #777b82;
+    width: 100%;
+    color: #a208fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+    overflow-y: scroll;
+}
+
+.main-content .top-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 12vh;
+    border: 1px solid green;
+    color: aliceblue;
+    background-color: #250234;
+}
+.main-content .content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    border: 1px solid green;
+    color: rgb(209, 223, 7);
+    background-color: #180b20;
+}
+
+.content .working{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.content .working .streak{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #250234;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+#streak-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#current-streak, #longest-streak{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+#streak-info img{
+    width: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+}
+
+.day {
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.day.active {
+    background-color: #1eff00;
+    color: #180b20;
+}
+.content .working .goal{
+    border-radius: 10px;
+    border: 1px solid green;
+    padding: 10px;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
+}
+
+.goal-setting-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.goal-setting-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.goal-setting-container input[type="text"],
+.goal-setting-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+.goal-setting-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.goal-list {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.goal-list li {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.goal-list li.completed {
+    background-color: #2e8b57;
+    text-decoration: line-through;
+}
+
+.goal-list button {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.leaderboard-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #250234;
+    width: 100%;
+    border: 1px solid green;
+    border-radius: 14px;
+    height: 90%;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: orange;
+    color: black;
+}
+
+.leaderboard {
+    height: 260px;
+    overflow-y: scroll;
+}
+
+.student {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.student .rank {
+    margin-right: 10px;
+}
+
+.your-rank {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #444;
+    text-align: center;
+}
+.main-content .progress-chart{
+    width: 100%;
+    height: 30vh;
+    /* color: white; */
+}
+
